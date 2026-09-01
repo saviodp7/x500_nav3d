@@ -1,3 +1,9 @@
+# Copyright 2026 Salvatore Del Peschio
+#
+# Use of this source code is governed by an MIT-style
+# license that can be found in the LICENSE file or at
+# https://opensource.org/licenses/MIT.
+
 import os
 
 from ament_index_python.packages import get_package_share_directory
@@ -12,7 +18,6 @@ def generate_launch_description():
     rviz_config_file = os.path.join(pkg_share, "rviz", "x500.rviz")
 
     robot_description = Command(["xacro ", xacro_file])
-
 
     return LaunchDescription(
         [
